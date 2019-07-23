@@ -1,0 +1,24 @@
+<div fxLayout="row" fxLayout.lt-sm="column" class="following">
+
+  <div fxFlex="80" fxLayout="row wrap">
+
+    <div *ngFor="let card of projects" class="cardRepo" fxLayout="column">
+
+      <div>
+        <a [href]="card.html_url" target="_blank">{{ card.name }}</a>
+      </div>
+      <div>
+        <span>{{card.body}}</span>
+      </div>
+      <div>
+        <span>Estado : {{card.state}}</span>
+      </div>
+      <div>
+        <span>Fecha : {{card.created_at}}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

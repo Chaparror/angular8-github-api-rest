@@ -1,0 +1,29 @@
+.navHeader {
+  font-family: Calibri;
+  background: black;
+  color: white;
+  padding: 5px;
+}
+
+.navLinks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+  }
+}
+
+
+@media screen and (max-width: 599px) {
+  .rowNav {
+    display: none;
+  }
+}
+
+
+.userLogin {
+  padding-right: 10px;
+}

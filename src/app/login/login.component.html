@@ -1,0 +1,18 @@
+<div style="margin: auto;border: 1px solid;width: 250px">
+
+  <h3>Basic Auth</h3>
+
+  <div class="container">
+    <form>
+      <label ><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required [(ngModel)]="username" >
+
+      <label ><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required [(ngModel)]="password">
+    </form>
+    <button (click)="login()">Login</button>
+    <span *ngIf="errorLabel" style="color: red;">{{ errorLabel }}</span>
+  </div>
+
+
+</div>

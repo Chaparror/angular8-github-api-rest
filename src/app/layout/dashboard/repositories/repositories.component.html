@@ -1,0 +1,45 @@
+<div fxLayout="row" fxLayout.lt-sm="column" class="repository">
+
+  <div fxFlex="20">
+    <h2>Repositorios</h2>
+
+    <div fxLayout.lt-sm="row" fxLayout="column">
+      <div fxFlex.lt-sm="50">
+        <ul>
+          <span>Acceso</span>
+          <li (click)="setAccess('all')"  [ngStyle]="{'color':currentAccess === 'all' ? 'blue' : null }">Todos<i *ngIf="currentAccess === 'all'" class="fa fa-check"></i></li>
+          <li (click)="setAccess('private')" [ngStyle]="{'color':currentAccess === 'private' ? 'blue' : null }">Privados<i *ngIf="currentAccess === 'private'" class="fa fa-check"></i></li>
+          <li (click)="setAccess('public')" [ngStyle]="{'color':currentAccess === 'public' ? 'blue' : null }">Pùblicos<i *ngIf="currentAccess === 'public'" class="fa fa-check"></i></li>
+        </ul>
+      </div>
+
+      <div fxFlex.lt-sm="50">
+        <ul>
+          <span>Tipo</span>
+          <li (click)="setType('all')"  [ngStyle]="{'color':currentType === 'all' ? 'blue' : null }">Todos<i *ngIf="currentType === 'all'" class="fa fa-check"></i></li>
+          <li *ngFor="let type of types" (click)="setType(type)"  [ngStyle]="{'color':currentType === type ? 'blue' : null }"> {{type}} <i *ngIf="currentType === type" class="fa fa-check"></i></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div fxFlex="80" fxLayout="row wrap">
+
+    <div *ngFor="let card of repos" class="cardRepo" fxLayout="column">
+
+      <div>
+        <a [href]="card.html_url" target="_blank">{{ card.name }}</a>
+      </div>
+      <div>
+        Accesso : <i class="fa" [ngClass]="{'fa-unlock':!card.private,'fa-lock':card.private}"></i>
+      </div>
+      <div>
+        {{ card.language }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

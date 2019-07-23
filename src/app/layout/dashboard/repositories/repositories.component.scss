@@ -1,0 +1,28 @@
+.repository {
+  font-family: Calibri;
+}
+
+.cardRepo {
+  width: 300px;
+  height: 180px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  div {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 8px;
+    cursor: pointer;
+  }
+}

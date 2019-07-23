@@ -1,0 +1,41 @@
+<nav fxLayout="row" fxFlex="100" class="navHeader">
+
+  <div fxFlex="70">
+
+    <div fxFlex="20" fxLayoutAlign="center center">
+      <i class="fa fa-2x fa-github"></i>
+    </div>
+
+    <div fxFlex="80" class="rowNav">
+      <ul class="navLinks" fxLayout="row">
+        <li (click)="navigateTo('/challenge/dashboard/repository')">Repositorios</li>
+        <li (click)="navigateTo('/challenge/dashboard/projects')">Proyectos</li>
+        <li (click)="navigateTo('/challenge/dashboard/followers')">Seguidores</li>
+        <li (click)="navigateTo('/challenge/dashboard/following')">Siguiendo</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div fxFlex="30" fxLayout="row" fxLayoutAlign="end center">
+
+    <div class="userLogin" fxLayout="row" fxLayoutGap="10px">
+
+      <div fxLayoutAlign="center center">
+        <img [src]="avatar_url" width="35px">
+      </div>
+
+      <div *ngIf="name" fxLayoutAlign="center center">
+        <span>{{name }}</span>
+      </div>
+
+
+      <div fxLayoutAlign="center center" (click)="singOut()">
+        <i class="fa fa-sign-out" style="cursor:pointer;"></i>
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>

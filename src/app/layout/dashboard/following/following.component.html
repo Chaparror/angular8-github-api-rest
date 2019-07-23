@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayout.lt-sm="column" class="following">
+
+  <div fxFlex="80" fxLayout="row wrap">
+
+    <div *ngFor="let card of following" class="cardRepo" fxLayout="column">
+
+      <div>
+        <a [href]="card.html_url" target="_blank">{{ card.login }}</a>
+      </div>
+      <div>
+        <img [src]="card.avatar_url" width="100">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
